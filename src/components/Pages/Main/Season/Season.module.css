@@ -1,0 +1,70 @@
+.season {
+    padding-bottom: 55px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1720px;
+}
+
+.swiper {
+    max-width: 1248px;
+    padding-bottom: 25px !important;
+    --swiper-pagination-color: #D1C12B;
+    --swiper-pagination-bullet-width: 10%;
+    --swiper-pagination-bullet-height: 2px;
+    --swiper-pagination-bullet-inactive-color: #FFFFFF;
+}
+
+.title {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-image: url("../../../../assets/season-phone.png");
+    background-repeat: no-repeat;
+    background-position: center 45px;
+    background-size: 100% 130px;
+}
+
+@media (max-width: 1120px) {
+    .title {
+        margin-right: 45px;
+        margin-left: 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .swiper {
+        --swiper-pagination-bullet-width: 15%;
+    }
+
+    .title {
+        font-size: 80px;
+        line-height: 80px;
+        background-size: 100% 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    .swiper {
+        --swiper-pagination-bullet-width: 20%;
+    }
+
+    .title {
+        margin-right: 25px;
+        margin-left: 25px;
+        font-size: 60px;
+        line-height: 60px;
+        background-size: 100% 85px;
+        padding-bottom: 40px;
+    }
+}
