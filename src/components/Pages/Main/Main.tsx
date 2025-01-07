@@ -7,12 +7,10 @@ import Contacts from "../../Contacts/Contacts";
 function Main(): ReactElement {
     return (
         <main>
-            <div>
-                <Info />
-                <Season />
-                <Actual />
-                <Contacts />
-            </div>
+            <Info />
+            <Season />
+            <Actual />
+            <Contacts />
         </main>
     )
 }

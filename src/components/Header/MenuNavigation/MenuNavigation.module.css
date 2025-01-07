@@ -17,6 +17,11 @@
     text-decoration-skip-ink: none;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: #D1C12B;
 }
 
 @media (max-width: 1120px) {

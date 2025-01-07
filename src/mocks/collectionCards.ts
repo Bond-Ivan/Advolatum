@@ -1,7 +1,7 @@
 import firstImage from "../assets/actualCard-1.jpg";
 import secondImage from "../assets/actualCard-2.jpg";
 
-const actualCards = [
+const collectionCards = [
     {
         image: firstImage,
         title: `Костюм Advolatum соцветие`,
@@ -24,4 +24,4 @@ const actualCards = [
     },
 ];
 
-export default actualCards;
+export default collectionCards;

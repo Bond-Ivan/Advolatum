@@ -1,19 +1,20 @@
 import { ReactElement } from "react";
 import styles from "./MenuNavigation.module.css";
+import { Link } from "react-router-dom";
 
 function MenuNavigation(): ReactElement {
     return (
         <nav className={styles.navigation}>
             <ul className={styles.list}>
                 <li>
-                    <a href="#" className={styles.link}>
+                    <Link to="/" className={styles.link}>
                         Главная
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#" className={styles.link}>
+                    <Link to="/collection" className={styles.link}>
                         Коллекции
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href="#" className={styles.link}>

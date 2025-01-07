@@ -4,7 +4,9 @@
     max-width: 270px;
     width: 100%;
     margin: 0 auto;
+
     box-shadow: 0px 8px 12px 0px #00000040;
+
 }
 
 .image {
@@ -62,12 +64,6 @@
 }
 
 @media (max-width: 900px) {
-    .item {
-        max-width: 230px;
-    }
-}
-
-@media (max-width: 600px) {
     .title {
         font-size: 15px;
         line-height: 15px;

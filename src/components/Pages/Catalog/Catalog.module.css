@@ -1,0 +1,60 @@
+.container {
+    margin: 0 auto;
+    max-width: 1720px;
+    padding: 0 60px;
+}
+
+.wrapper {
+    padding: 160px 0 100px 0;
+    display: flex;
+    gap: 100px;
+    background-image: url("../../../assets/collection-phone.png");
+    background-repeat: no-repeat;
+    background-position: left 20px;
+    background-size: 100% 130px;
+}
+
+.image {
+    display: none;
+    margin: 0 auto;
+}
+
+@media (max-width: 1120px) {
+    .container {
+        padding: 0 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        gap: 60px;
+    }
+
+    .wrapper {
+        background-position: left 50px;
+        background-size: 100% 100px;
+    }
+}
+
+@media (max-width: 680px) {
+    .image {
+        display: block;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .wrapper {
+        background-position: left 66px;
+        background-size: 100% 80px;
+        padding-bottom: 60px;
+    }
+}

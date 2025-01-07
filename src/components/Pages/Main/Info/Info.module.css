@@ -66,6 +66,16 @@
     border: 2px solid #D1C12B;
     border-radius: 50px;
     color: #D1C12B;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: #FFFFFF;
+    background-color: #D1C12B;
+}
+
+.link:hover svg {
+    fill: #FFFFFF;
 }
 
 .image {
@@ -75,6 +85,8 @@
 
 .svg {
     margin-right: 26.5px;
+    fill: #D1C12B;
+    transition: fill 0.3s ease-in-out;
 }
 
 @media (max-width: 1600px) {

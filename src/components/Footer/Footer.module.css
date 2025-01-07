@@ -44,16 +44,21 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #FFFFFF;
+    transition: color 0.3s ease-in-out;
+}
+
+.text:hover {
+    color: #D1C12B;
 }
 
 .link {
     font-size: 15px;
     line-height: 18.18px;
-} 
+}
 
 .link:first-child {
     margin-bottom: 10px;
-} 
+}
 
 @media (max-width: 1120px) {
     .container {
@@ -75,7 +80,7 @@
         padding-top: 20px;
         padding-bottom: 30px;
     }
-    
+
     .wrapper {
         flex-direction: column-reverse;
         align-items: center;
@@ -106,5 +111,5 @@
     .link {
         font-size: 10px;
         line-height: 12.12px;
-    } 
+    }
 }

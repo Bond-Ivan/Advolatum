@@ -1,15 +1,15 @@
 import { ReactElement } from "react";
-import styles from "./Actual.module.css";
-import actualCards from "../../../../mocks/actualCards";
-import ActualCard from "./ActualCard/ActualCard";
+import styles from "./CollectionList.module.css";
+import collectionCards from "../../../../mocks/collectionCards";
+import ActualCard from "../../Main/Actual/ActualCard/ActualCard";
 
-function Actual(): ReactElement {
+function CollectionList(): ReactElement {
     return (
         <section className={styles.actual}>
             <div className={styles.container}>
-                <h2 className={styles.title}>Актуальное</h2>
+                <h2 className={styles.title}>Товары коллекции</h2>
                 <ul className={styles.list}>
-                    {actualCards.map(({ image, title, price }, index) => {
+                    {collectionCards.map(({ image, title, price }, index) => {
                         return (
                             <ActualCard key={index} image={image} title={title} price={price} />
                         )
@@ -21,4 +21,4 @@ function Actual(): ReactElement {
     )
 }
 
-export default Actual;
+export default CollectionList;
