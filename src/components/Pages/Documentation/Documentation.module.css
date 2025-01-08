@@ -1,0 +1,49 @@
+.documentation {
+    padding-top: 45px;
+    padding-bottom: 20%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1720px;
+    padding: 0 60px;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    height: 1000px;
+    overflow-y: auto;
+}
+
+@media (max-width: 1120px) {
+    .container {
+        padding: 0 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .description {
+        height: 750px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .description {
+        height: 640px;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

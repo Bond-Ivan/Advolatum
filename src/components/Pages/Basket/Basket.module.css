@@ -1,0 +1,26 @@
+.container {
+    margin: 0 auto;
+    max-width: 1720px;
+    padding: 0 60px;
+}
+
+.wrapper {
+    padding-top: 80px;
+    display: flex;
+    background-image: url("../../../assets/basket-phone.png");
+    background-repeat: no-repeat;
+    background-position: left 0px;
+    background-size: 67% 100px;
+}
+
+@media (max-width: 1120px) {
+    .container {
+        padding: 0 45px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 25px;
+    }
+}

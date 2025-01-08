@@ -1,0 +1,126 @@
+.container {
+    margin: 0 auto;
+    max-width: 1720px;
+    padding: 0 60px;
+}
+
+.title {
+    margin-bottom: 60px;
+    padding: 50px 0;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-transform: uppercase;
+    background-image: url("../../../assets/aboutUs-phone.png");
+    background-repeat: no-repeat;
+    background-position: right 5px;
+    background-size: 100% 160px;
+    color: #FFFFFF;
+}
+
+.description {
+    margin-bottom: 70px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.box {
+    max-width: 1260px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    gap: 30px;
+}
+
+.firstImage {
+    object-fit: cover;
+    width: 30%;
+}
+
+.secondImage {
+    object-fit: cover;
+    width: 40%;
+}
+
+.thirdImage {
+    object-fit: cover;
+    width: 25%;
+}
+
+
+@media (max-width: 1120px) {
+    .container {
+        padding: 0 45px;
+    }
+}
+
+@media (max-width: 900px) {
+    .title {
+        padding: 30px 0;
+        margin-bottom: 0;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 60px;
+        text-align: left;
+        background-image: url("../../../assets/aboutUs-phone--tablet.png");
+        background-position: left 15px;
+        background-size: 50% 70px;
+    }
+
+    .description {
+        margin-bottom: 25px;
+    }
+
+    .firstImage {
+        width: 50%;
+    }
+
+    .secondImage {
+        width: 50%;
+    }
+
+    .thirdImage {
+        display: none;
+    }
+
+    .box {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .title {
+        background-size: 50% 55px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .firstImage {
+        width: 45%;
+    }
+
+    .secondImage {
+        width: 45%;
+    }
+
+    .box {
+        margin-bottom: 35px;
+    }
+}

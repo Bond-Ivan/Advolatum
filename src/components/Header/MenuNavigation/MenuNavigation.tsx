@@ -17,9 +17,9 @@ function MenuNavigation(): ReactElement {
                     </Link>
                 </li>
                 <li>
-                    <a href="#" className={styles.link}>
+                    <Link to="/aboutUs" className={styles.link}>
                         О нас
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href="#" className={styles.link}>
@@ -27,9 +27,9 @@ function MenuNavigation(): ReactElement {
                     </a>
                 </li>
                 <li>
-                    <a href="#" className={styles.link}>
+                    <Link to="/basket" className={styles.link}>
                         Корзина
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
