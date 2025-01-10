@@ -1,3 +1,7 @@
+.basket {
+    padding-bottom: 95px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1720px;
@@ -11,6 +15,59 @@
     background-repeat: no-repeat;
     background-position: left 0px;
     background-size: 67% 100px;
+}
+
+.inner {
+    max-width: 815px;
+    padding-right: 15px;
+}
+
+.customCheckbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 194px;
+    cursor: pointer;
+    background-color: #10171F;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.customCheckbox input {
+    display: none;
+}
+
+.checkbox {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3B4654;
+    margin-right: 25px;
+    position: relative;
+}
+
+.customCheckbox input:checked+.checkbox::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 8px;
+    height: 12px;
+    border: solid #D1C12B;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.labelText {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+    max-width: 90px;
 }
 
 @media (max-width: 1120px) {

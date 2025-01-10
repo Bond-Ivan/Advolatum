@@ -4,43 +4,45 @@ import styles from "./BasketForm.module.css";
 function BasketForm(): ReactElement {
     return (
         <div className={styles.wrapper}>
-            <h2 className={styles.title}>Оформление заказа</h2>
             <form className={styles.form}>
-                <div className={styles.inner}>
-                    <label className={styles.label}>данные получателя</label>
-                    <input type="text" placeholder="Фамилия" className={styles.input} />
-                    <input type="text" placeholder="Имя" className={styles.input} />
-                    <input type="text" placeholder="Отчество" className={styles.input} />
-                </div>
-                <div className={styles.inner}>
-                    <label className={styles.label}>контактный номер телефона</label>
-                    <input type="tel" placeholder="+7 (   )   -   -" className={styles.input} />
-                </div>
-                <div className={styles.inner}>
-                    <label className={styles.label}>данные места доставки</label>
-                    <input type="text" placeholder="Город" className={styles.input} />
-                    <input type="text" placeholder="Улица" className={styles.input} />
-                    <div>
-                        <input type="number" placeholder="Дом" className={`${styles.input} ${styles.inputStyle}`} />
-                        <input type="text" placeholder="кв/оффис" className={`${styles.input} ${styles.inputStyle}`} />
+                <div className={styles.box}>
+                    <h2 className={styles.title}>Оформление заказа</h2>
+                    <div className={styles.inner}>
+                        <label className={styles.label}>данные получателя</label>
+                        <input type="text" placeholder="Фамилия" className={styles.input} />
+                        <input type="text" placeholder="Имя" className={styles.input} />
+                        <input type="text" placeholder="Отчество" className={styles.input} />
                     </div>
-                </div>
+                    <div className={styles.inner}>
+                        <label className={styles.label}>контактный номер телефона</label>
+                        <input type="tel" placeholder="+7 (   )   -   -" className={styles.input} />
+                    </div>
+                    <div className={styles.inner}>
+                        <label className={styles.label}>данные места доставки</label>
+                        <input type="text" placeholder="Город" className={styles.input} />
+                        <input type="text" placeholder="Улица" className={styles.input} />
+                        <div>
+                            <input type="number" placeholder="Дом" className={`${styles.input} ${styles.inputStyle}`} />
+                            <input type="text" placeholder="кв/оффис" className={`${styles.input} ${styles.inputStyle}`} />
+                        </div>
+                    </div>
 
-                <div className={styles.checkboxesWrapper}>
-                    <div>
-                        <label className={styles.customCheckbox}>
-                            <input type="checkbox" />
-                            <span className={styles.checkbox}></span>
-                            <span className={styles.labelText}>Оплата online</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label className={styles.customCheckbox}>
-                            <input type="checkbox" />
-                            <span className={styles.checkbox}></span>
-                            <span className={styles.labelText}>наложенным
-                                платежом</span>
-                        </label>
+                    <div className={styles.checkboxesWrapper}>
+                        <div>
+                            <label className={styles.customCheckbox}>
+                                <input type="checkbox" />
+                                <span className={styles.checkbox}></span>
+                                <span className={styles.labelText}>Оплата online</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label className={styles.customCheckbox}>
+                                <input type="checkbox" />
+                                <span className={styles.checkbox}></span>
+                                <span className={styles.labelText}>наложенным
+                                    платежом</span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 
