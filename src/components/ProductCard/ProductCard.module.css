@@ -1,19 +1,17 @@
-.item {
+.actualItem, .catalogItem {
     border-radius: 10px;
     background-color: #10171F;
     max-width: 270px;
     width: 100%;
     margin: 0 auto;
-
     box-shadow: 0px 8px 12px 0px #00000040;
-
 }
 
 .image {
     border-radius: 10px 10px 0 0;
 }
 
-.title {
+.actualTitle, .catalogTitle {
     max-width: 300px;
     margin-top: 6px;
     margin-bottom: 15px;
@@ -27,9 +25,9 @@
     text-transform: uppercase;
 }
 
-.price {
+.actualPrice, .catalogPrice {
     display: block;
-    margin-right: 60px;
+    margin-right: 40px;
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
@@ -44,7 +42,7 @@
     padding: 0 10px 10px 10px;
 }
 
-.button {
+.actualButton, .catalogButton {
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
@@ -58,29 +56,65 @@
     transition: all 0.3s ease-in-out;
 }
 
-.button:hover {
+.catalogButton:hover, .actualButton:hover {
     color: #D1C12B;
     text-decoration-color: #D1C12B;
 }
 
 @media (max-width: 900px) {
-    .title {
+    .actualItem {
+        max-width: 230px;
+    }
+
+    .actualPrice {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .actualButton {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .catalogTitle {
         font-size: 15px;
         line-height: 15px;
     }
 
-    .price {
+    .catalogPrice {
         margin-right: 20px;
         font-size: 15px;
         line-height: 15px;
     }
 
-    .button {
+    .catalogButton {
         font-size: 15px;
         line-height: 15px;
     }
 
-    .item {
+    .catalogItem {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .actualTitle {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .actualPrice {
+        margin-right: 20px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .actualButton {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .actualItem {
         max-width: 180px;
     }
 }

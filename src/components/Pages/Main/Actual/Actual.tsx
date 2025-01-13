@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styles from "./Actual.module.css";
 import actualCards from "../../../../mocks/actualCards";
-import ActualCard from "./ActualCard/ActualCard";
+import ProductCard from "../../../ProductCard/ProductCard";
 
 function Actual(): ReactElement {
     return (
@@ -11,7 +11,7 @@ function Actual(): ReactElement {
                 <ul className={styles.list}>
                     {actualCards.map(({ image, title, price }, index) => {
                         return (
-                            <ActualCard key={index} image={image} title={title} price={price} />
+                            <ProductCard key={index} image={image} title={title} price={price} type={"actualCard"}/>
                         )
                     })}
                 </ul>

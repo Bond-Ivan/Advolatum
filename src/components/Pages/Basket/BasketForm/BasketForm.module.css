@@ -1,3 +1,7 @@
+.wrapper {
+    margin-left: auto;
+}
+
 .form {
     width: 100%;
     max-width: 423px;

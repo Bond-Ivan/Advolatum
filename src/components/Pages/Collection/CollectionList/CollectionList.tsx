@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styles from "./CollectionList.module.css";
 import collectionCards from "../../../../mocks/collectionCards";
-import ActualCard from "../../Main/Actual/ActualCard/ActualCard";
+import ProductCard from "../../../ProductCard/ProductCard";
 
 function CollectionList(): ReactElement {
     return (
@@ -11,7 +11,7 @@ function CollectionList(): ReactElement {
                 <ul className={styles.list}>
                     {collectionCards.map(({ image, title, price }, index) => {
                         return (
-                            <ActualCard key={index} image={image} title={title} price={price} />
+                            <ProductCard key={index} image={image} title={title} price={price} />
                         )
                     })}
                 </ul>
