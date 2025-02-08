@@ -44,6 +44,15 @@ function BasketForm(): ReactElement {
                             </label>
                         </div>
                     </div>
+                    <div>
+                        <label className={styles.customCheckbox}>
+                            <input type="checkbox" />
+                            <span className={styles.checkbox}></span>
+                            <span className={styles.labelTextStyle}>
+                                Согласие на обработку персональных данных
+                            </span>
+                        </label>
+                    </div>
                 </div>
 
                 <button className={styles.button}>

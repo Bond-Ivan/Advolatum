@@ -33,6 +33,7 @@
     border-radius: 10px;
     padding: 10px 25px;
     box-shadow: 0px 4px 4px 0px #00000040;
+    max-height: 52px;
 }
 
 .customCheckbox input {
@@ -75,6 +76,21 @@
     .container {
         padding: 0 45px;
     }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .inner {
+        padding-right: 0;
+    }
+
+    .customCheckbox {
+       display: none;
+    }
+}
+
+@media (max-width: 900px) {
 }
 
 @media (max-width: 600px) {

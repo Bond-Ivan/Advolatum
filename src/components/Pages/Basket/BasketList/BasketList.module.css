@@ -9,4 +9,5 @@
     gap: 15px;
     max-height: 450px;
     overflow-y: auto;
+    border-radius: 10px;
 }

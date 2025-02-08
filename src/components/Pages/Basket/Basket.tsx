@@ -10,7 +10,7 @@ function Basket(): ReactElement {
 
     useEffect(() => {
         setItems(basketList)
-    }, [basketList])
+    }, [])
 
     return (
         <main>

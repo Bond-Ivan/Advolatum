@@ -7,6 +7,7 @@ import Collection from "./components/Pages/Collection/Collection";
 import AboutUs from "./components/Pages/AboutUs/AboutUs";
 import Documentation from "./components/Pages/Documentation/Documentation";
 import Basket from "./components/Pages/Basket/Basket";
+import Contacts from "./components/Contacts/Contacts";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/documentation" element={<Documentation />} />
         <Route path="/basket" element={<Basket />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
       <Footer />
     </BrowserRouter>

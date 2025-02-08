@@ -22,9 +22,9 @@ function MenuNavigation(): ReactElement {
                     </Link>
                 </li>
                 <li>
-                    <a href="#" className={styles.link}>
+                    <Link to="/contacts" className={styles.link}>
                         Контакты
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <Link to="/basket" className={styles.link}>
