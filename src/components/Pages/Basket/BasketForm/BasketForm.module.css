@@ -111,7 +111,6 @@
     margin-bottom: 78px;
     padding-bottom: 12px;
     display: flex;
-    flex-wrap: wrap;
     gap: 24px;
     row-gap: 12px;
 }
@@ -178,12 +177,16 @@
     max-width: 90px;
 }
 
+.checkboxBoxMobile {
+    display: none;
+}
+
 @media (max-width: 1120px) {
 
     .form {
         max-width: 600px;
     }
-    
+
     .wrapper {
         margin-left: 0;
     }
@@ -199,7 +202,12 @@
     }
 
     .checkboxesWrapper {
+        flex-wrap: wrap;
         margin-bottom: 0;
+    }
+
+    .checkboxBoxMobile {
+        display: block;
     }
 
     .labelTextStyle {

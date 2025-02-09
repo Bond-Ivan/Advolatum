@@ -5,6 +5,7 @@ const deleteCard = (title: string) => {
     const updatedBasket = actualBasket.filter((item: CardBasket) => item.title !== title);
 
     localStorage.setItem('basket', JSON.stringify(updatedBasket));
+    window.dispatchEvent(new Event('storage'));
 };
 
 export default deleteCard;

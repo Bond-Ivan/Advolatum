@@ -8,6 +8,25 @@
     gap: 46px;
 }
 
+.item {
+    position: relative;
+}
+
+.count {
+    position: absolute;
+    content: '';
+    top: -20px;
+    right: -20px;
+    width: 20px;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 3px;
+    font-weight: 600;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #D1C12B;
+}
+
 .link {
     font-size: 20px;
     font-weight: 400;

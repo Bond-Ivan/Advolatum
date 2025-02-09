@@ -12,6 +12,9 @@ const addCard = (item: Card): void => {
     }
 
     localStorage.setItem('basket', JSON.stringify(actualBasket));
+
+
+    window.dispatchEvent(new Event('storage'));
 };
 
 export default addCard;

@@ -22,8 +22,8 @@ function Season(): ReactElement {
                 >
                     {swiperSlides.map(({image, text}, index) => {
                         return (
-                            <SwiperSlide>
-                                <SeasonSwiperSlide key={index} image={image} text={text} />
+                            <SwiperSlide key={index}>
+                                <SeasonSwiperSlide image={image} text={text} />
                             </SwiperSlide>
                         )
                     })}

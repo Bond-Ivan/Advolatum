@@ -5,12 +5,25 @@ import BasketList from "./BasketList/BasketList";
 import BasketTotal from "./BasketTotal/BasketTotal";
 
 function Basket(): ReactElement {
-    const basketList = localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')!) : [];
     const [items, setItems] = useState([]);
 
+    const updateTotalItems = () => {
+        const count = localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')!) : [];
+        setItems(count);
+    };
+
     useEffect(() => {
-        setItems(basketList)
-    }, [])
+        updateTotalItems();
+
+        const handleStorageChange = () => {
+            updateTotalItems();
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
 
     return (
         <main>
