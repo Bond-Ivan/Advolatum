@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import styles from "./Season.module.css";
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -13,14 +13,17 @@ function Season(): ReactElement {
             <div className={styles.container}>
                 <h2 className={styles.title}>на этот сезон</h2>
                 <Swiper
-                    modules={[Pagination]}
+                    autoplay={{delay: 3000}}
+                    speed={800}
+                    loop
+                    modules={[Pagination, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
                     className={styles.swiper}
                 >
-                    {swiperSlides.map(({image, text}, index) => {
+                    {swiperSlides.map(({ image, text }, index) => {
                         return (
                             <SwiperSlide key={index}>
                                 <SeasonSwiperSlide image={image} text={text} />

@@ -72,11 +72,15 @@
     color: #FFFFFF;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 
 .catalogButton:hover, .actualButton:hover {
     color: #D1C12B;
     text-decoration-color: #D1C12B;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 900px) {

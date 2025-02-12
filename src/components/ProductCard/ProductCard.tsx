@@ -2,6 +2,8 @@ import { ReactElement, useEffect, useRef } from "react";
 import styles from "./ProductCard.module.css";
 import Card from "../../shared/types/card";
 import addCard from "../../shared/utils/addCard";
+import { Store } from "react-notifications-component";
+import 'react-notifications-component/dist/theme.css';
 
 function ProductCard({ image, title, price, type }: Card): ReactElement {
     const cardRef = useRef<HTMLLIElement>(null);
@@ -19,7 +21,7 @@ function ProductCard({ image, title, price, type }: Card): ReactElement {
                 const halfWidth = card.clientWidth / 2;
                 const halfHeight = card.clientHeight / 2;
 
-                const calcAngleX = (y - halfHeight) / 22; 
+                const calcAngleX = (y - halfHeight) / 22;
                 const calcAngleY = (x - halfWidth) / 22;
 
                 innerCard.style.transform = `rotateY(${calcAngleY}deg) rotateX(${-calcAngleX}deg) scale(1.05)`;
@@ -47,6 +49,21 @@ function ProductCard({ image, title, price, type }: Card): ReactElement {
         };
     }, []);
 
+    const handleAddToCart = () => {
+        addCard({ image, title, price });
+        Store.addNotification({
+            message: "Товар добавлен в корзину.",
+            type: "warning",
+            insert: "top",
+            container: "top-left",
+            dismiss: {
+                duration: 2000,
+                onScreen: true,
+            },
+            width: 280,
+        });
+    };
+
     return (
         <li ref={cardRef} className={type !== "catalogCard" ? styles.actualItem : styles.catalogItem}>
             <div className={styles.innerCard} ref={innerCardRef}>
@@ -55,9 +72,8 @@ function ProductCard({ image, title, price, type }: Card): ReactElement {
                 <h3 className={type !== "catalogCard" ? styles.actualTitle : styles.catalogTitle}>{title}</h3>
                 <div className={styles.box}>
                     <span className={type !== "catalogCard" ? styles.actualPrice : styles.catalogPrice}>{price} ₽</span>
-                    <button className={type !== "catalogCard" ? styles.actualButton : styles.catalogButton} onClick={() => {
-                        addCard({ image, title, price })
-                    }}>В корзину</button>
+                    <button className={type !== "catalogCard" ? styles.actualButton : styles.catalogButton} onClick={
+                        handleAddToCart}>В корзину</button>
                 </div>
             </div>
         </li>
