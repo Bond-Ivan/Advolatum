@@ -11,7 +11,7 @@ function CatalogMenu(): ReactElement {
             </li>
             <li className={styles.item}>
                 <button type="button" className={styles.button}>
-                    Куртки
+                    Футболки
                 </button>
             </li>
             <li className={styles.item}>

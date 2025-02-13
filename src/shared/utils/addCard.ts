@@ -3,7 +3,7 @@ import Card from "../types/card";
 
 const addCard = (item: Card): void => {
     const actualBasket: CardBasket[] = JSON.parse(localStorage.getItem('basket') || '[]');
-    const existingItemIndex = actualBasket.findIndex((existingItem) => existingItem.title === item.title);
+    const existingItemIndex = actualBasket.findIndex((existingItem) => existingItem.id === item.id);
 
     if (existingItemIndex !== -1) {
         actualBasket[existingItemIndex].count += 1;

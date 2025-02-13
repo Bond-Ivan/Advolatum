@@ -13,9 +13,9 @@ function CatalogList(): ReactElement {
     return (
         <div className={styles.wrapper}>
             <ul className={styles.list}>
-                {catalogCards.slice(0, cardsCount).map(({ image, title, price }, index) => {
+                {catalogCards.slice(0, cardsCount).map(({ id, image, title, price }, index: number) => {
                     return (
-                        <ProductCard key={index} image={image} title={title} price={price} type={"catalogCard"} />
+                        <ProductCard key={index} id={id} image={image} title={title} price={price} type={"catalogCard"} />
                     )
                 })}
             </ul>

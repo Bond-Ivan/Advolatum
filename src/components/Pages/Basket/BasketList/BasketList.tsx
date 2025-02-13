@@ -9,23 +9,25 @@ function BasketList(): ReactElement {
     const basketList = localStorage.getItem('basket') ? JSON.parse(localStorage.getItem('basket')!) : [];
     const [basket, setBasket] = useState<CardBasket[]>(basketList);
     const [isModalOpen, setModalOpen] = useState<boolean>(false);
-    const [cardToDelete, setCardToDelete] = useState<string | null>(null);
+    const [cardId, setCardId] = useState<number | null>(null);
+    const [cardTitle, setCardTitle] = useState<string | null>(null);
 
     const closeDeleteModal = () => {
         setModalOpen(false);
-        setCardToDelete(null);
+        setCardId(null);
     };
 
-    const handleDelete = (title: string) => {
-        setCardToDelete(title);
+    const handleDelete = (id: number, title: string) => {
+        setCardId(id);
+        setCardTitle(title);
         setModalOpen(true);
     };
 
     const confirmDeleteModal = () => {
-        if (!cardToDelete) return;
+        if (!cardId) return;
 
-        deleteCard(cardToDelete);
-        setBasket(basket.filter((item) => item.title !== cardToDelete));
+        deleteCard(cardId);
+        setBasket(basket.filter((item) => item.id !== cardId));
         setModalOpen(false);
     };
 
@@ -33,15 +35,15 @@ function BasketList(): ReactElement {
         <>
             <div className={styles.wrapper}>
                 <ul className={styles.list}>
-                    {basket.map(({ image, title, price, count }: CardBasket, index: number) => {
+                    {basket.map(({ id, image, title, price, count }: CardBasket, index: number) => {
                         return (
-                            <BasketCard key={index} image={image} title={title} price={price} count={count} handleDelete={handleDelete} />
+                            <BasketCard key={index} id={id} image={image} title={title} price={price} count={count} handleDelete={handleDelete} />
                         )
                     })}
                 </ul>
             </div>
             {isModalOpen && (
-                <ModalDelete onClose={closeDeleteModal} onConfirm={confirmDeleteModal} cardTitle={cardToDelete}/>
+                <ModalDelete onClose={closeDeleteModal} onConfirm={confirmDeleteModal} cardTitle={cardTitle}/>
             )}
         </>
     )

@@ -15,9 +15,9 @@ function Actual(): ReactElement {
             <div className={styles.container}>
                 <h2 className={styles.title}>Актуальное</h2>
                 <ul className={styles.list}>
-                    {catalogCards.slice(0, cardsCount).map(({ image, title, price }, index) => {
+                    {catalogCards.slice(0, cardsCount).map(({ image, title, price, id }, index: number) => {
                         return (
-                            <ProductCard key={index} image={image} title={title} price={price} type={"actualCard"} />
+                            <ProductCard key={index} id={id} image={image} title={title} price={price} type={"actualCard"} />
                         )
                     })}
                 </ul>

@@ -5,7 +5,7 @@ import addCard from "../../shared/utils/addCard";
 import { Store } from "react-notifications-component";
 import 'react-notifications-component/dist/theme.css';
 
-function ProductCard({ image, title, price, type }: Card): ReactElement {
+function ProductCard({ id, image, title, price, type }: Card): ReactElement {
     const cardRef = useRef<HTMLLIElement>(null);
     const innerCardRef = useRef<HTMLDivElement>(null);
     const glareRef = useRef<HTMLDivElement>(null);
@@ -50,7 +50,7 @@ function ProductCard({ image, title, price, type }: Card): ReactElement {
     }, []);
 
     const handleAddToCart = () => {
-        addCard({ image, title, price });
+        addCard({ id, image, title, price });
         Store.addNotification({
             message: "Товар добавлен в корзину.",
             type: "warning",

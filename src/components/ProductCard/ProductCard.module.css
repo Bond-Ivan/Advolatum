@@ -23,6 +23,8 @@
     position: relative;
     transition: transform 0.2s ease-out;
     transform-style: preserve-3d;
+    background-color: #10171F;
+    border-radius: 10px;
 }
 
 .glare {

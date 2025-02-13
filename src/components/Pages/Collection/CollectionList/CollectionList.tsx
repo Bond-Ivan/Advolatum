@@ -15,9 +15,9 @@ function CollectionList(): ReactElement {
             <div className={styles.container}>
                 <h2 className={styles.title}>Товары коллекции</h2>
                 <ul className={styles.list}>
-                    {catalogCards.slice(0, cardsCount).map(({ image, title, price }, index) => {
+                    {catalogCards.slice(0, cardsCount).map(({ id, image, title, price }, index: number) => {
                         return (
-                            <ProductCard key={index} image={image} title={title} price={price} />
+                            <ProductCard key={index} id={id} image={image} title={title} price={price} />
                         )
                     })}
                 </ul>

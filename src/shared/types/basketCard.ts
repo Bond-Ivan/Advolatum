@@ -1,9 +1,10 @@
 type CardBasket = {
+    id: number,
     image: string,
     title: string,
     price: string,
     count: number,
-    handleDelete?: (title: string) => any,
+    handleDelete?: (id: number, title: string) => any,
     isRemoving?: boolean; 
 }
 
