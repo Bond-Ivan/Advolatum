@@ -1,21 +1,29 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import styles from "./CollectionList.module.css";
-import collectionCards from "../../../../mocks/collectionCards";
 import ProductCard from "../../../ProductCard/ProductCard";
+import catalogCards from "../../../../mocks/catalogCards";
 
 function CollectionList(): ReactElement {
+    const [cardsCount, setCardsCount] = useState<number>(4);
+
+    const loadMoreCards = () => {
+        setCardsCount(prevCards => prevCards + 4);
+    };
+
     return (
         <section className={styles.actual}>
             <div className={styles.container}>
                 <h2 className={styles.title}>Товары коллекции</h2>
                 <ul className={styles.list}>
-                    {collectionCards.map(({ image, title, price }, index) => {
+                    {catalogCards.slice(0, cardsCount).map(({ image, title, price }, index) => {
                         return (
                             <ProductCard key={index} image={image} title={title} price={price} />
                         )
                     })}
                 </ul>
-                <button className={styles.button}>Смотреть больше</button>
+                {cardsCount < 8 && (
+                    <button className={styles.button} onClick={loadMoreCards}>Смотреть больше</button>
+                )}
             </div>
         </section>
     )

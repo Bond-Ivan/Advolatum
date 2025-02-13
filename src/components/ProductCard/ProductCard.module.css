@@ -1,17 +1,28 @@
+@keyframes cardVisible {
+    from {
+        opacity: 0;
+    }
 
-.actualItem, .catalogItem {
+    to {
+        opacity: 1;
+    }
+}
+
+.actualItem,
+.catalogItem {
     border-radius: 10px;
     max-width: 270px;
     width: 100%;
     margin: 0 auto;
     position: relative;
     perspective: 1000px;
+    animation: cardVisible 1.5s;
 }
 
 .innerCard {
     position: relative;
     transition: transform 0.2s ease-out;
-    transform-style: preserve-3d; 
+    transform-style: preserve-3d;
 }
 
 .glare {
@@ -29,7 +40,8 @@
     border-radius: 10px 10px 0 0;
 }
 
-.actualTitle, .catalogTitle {
+.actualTitle,
+.catalogTitle {
     max-width: 300px;
     margin-top: 6px;
     margin-bottom: 15px;
@@ -43,7 +55,8 @@
     text-transform: uppercase;
 }
 
-.actualPrice, .catalogPrice {
+.actualPrice,
+.catalogPrice {
     display: block;
     margin-right: 40px;
     font-size: 20px;
@@ -60,7 +73,8 @@
     padding: 0 10px 10px 10px;
 }
 
-.actualButton, .catalogButton {
+.actualButton,
+.catalogButton {
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
@@ -76,7 +90,8 @@
     z-index: 1;
 }
 
-.catalogButton:hover, .actualButton:hover {
+.catalogButton:hover,
+.actualButton:hover {
     color: #D1C12B;
     text-decoration-color: #D1C12B;
     transform: scale(1.05) translateY(-2px);

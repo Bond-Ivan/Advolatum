@@ -3,7 +3,6 @@ import styles from "./BasketCard.module.css";
 import CardBasket from "../../../../../shared/types/basketCard";
 
 function BasketCard({ image, title, price, count, handleDelete }: CardBasket): ReactElement {
-
     return (
         <li className={styles.item}>
             <img src={image} alt="Изображение товара" className={styles.image} width={150} height={150} />

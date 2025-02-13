@@ -4,6 +4,7 @@ type CardBasket = {
     price: string,
     count: number,
     handleDelete?: (title: string) => any,
+    isRemoving?: boolean; 
 }
 
 export default CardBasket;
