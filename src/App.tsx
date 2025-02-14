@@ -15,7 +15,7 @@ import ScrollToTop from "./shared/scrollTop/scrollTop";
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='Advolatum'>
       <Header />
       <ScrollToTop />
       <AnimatePresence mode="wait">
