@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import styles from "./BasketForm.module.css";
-import InputMask from 'react-input-mask';
 
 function BasketForm(): ReactElement {
     return (
@@ -17,7 +16,7 @@ function BasketForm(): ReactElement {
                     
                     <div className={styles.inner}>
                         <label className={styles.label}>контактный номер телефона</label>
-                        <InputMask mask="+7 (999) 999-9999" type="tel" placeholder="+7 (   )   -   -" className={styles.input} />
+                        <input type="tel" placeholder="+7 (   )   -   -" className={styles.input} />
                     </div>
 
                     <div className={styles.inner}>
